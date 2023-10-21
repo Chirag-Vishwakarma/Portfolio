@@ -1,6 +1,7 @@
 >Web Designer Portfolio - Chirag
->![1](https://github.com/Chirag-Vishwakarma/Portfolio/assets/77611067/a75f0b13-52c9-44cc-83eb-8aa0ec012f4b)
-![2](https://github.com/Chirag-Vishwakarma/Portfolio/assets/77611067/4245ed3c-8250-4e55-abf8-475755f0c095)
-![3](https://github.com/Chirag-Vishwakarma/Portfolio/assets/77611067/40d12683-0092-4745-bd88-548372dfc5c0)
-![4](https://github.com/Chirag-Vishwakarma/Portfolio/assets/77611067/61b3abec-5ee7-4a51-908d-c8edb07f86e4)
-![5](https://github.com/Chirag-Vishwakarma/Portfolio/assets/77611067/77ae70ce-e2db-465d-bb47-e9151bb3d44e)
+![1](https://github.com/Chirag-Vishwakarma/Portfolio/assets/77611067/8de6701f-5f56-46ff-98d4-b4d725edb522)
+![2](https://github.com/Chirag-Vishwakarma/Portfolio/assets/77611067/772dfeea-7042-41a1-b7f6-c91290659551)
+![Uploading 3.png…]()
+![Uploading 4.png…]()
+![Uploading 5.png…]()
+![Uploading 6.png…]()
