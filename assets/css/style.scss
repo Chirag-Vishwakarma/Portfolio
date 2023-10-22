@@ -1,0 +1,542 @@
+@use "flex-extend" as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+// Font-family
+$primary-font: "Segoe UI", "Open Sans", calibri, sans-serif;
+$dancing-script: "Dancing Script", pacifico, cursive;
+$pacifico: pacifico, "Dancing Script", cursive;
+
+// Font-size
+$border-rad-sm: 0.5rem; //10px
+$border-rad-md: 2.5rem; //50px
+
+//Gradients (background-image)
+$purpleBottomGrad: linear-gradient(180deg, #6A11CB 0%, #005BEA 100%);
+$purpleRightGrad: linear-gradient(90deg, #6A11CB 0%, #005BEA 100%);
+
+$yellowRightGrad: linear-gradient(90deg, #FFE91C 0%, #FFA024 100%);
+$yellowBottomGrad: linear-gradient(180deg, #FFE91C 0%, #FFA024 100%);
+
+$blackGrad: linear-gradient(180deg, rgba(0,0,0,0.7), rgb(0,0,0));
+
+$wpBottomGrad: linear-gradient(180deg, #b700ff 0%, #7b00ff 50%, #0088ff 100%);
+$wbBottomGrad: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 100%);
+
+//box-shadow
+$yellow-head-shadow: 0 0 2.5rem 0 #FFA024;
+$blue-head-shadow: 0 0 2rem 0 #6A11CB;
+
+:root {
+	font-size: 20px;
+}
+*, body, ::before, ::after {
+	box-sizing: border-box;
+	font-family: $primary-font;
+	font-weight: 400;
+	line-height: 1.75;
+}
+body {
+	margin: 0;
+	padding: 0;
+	background: white;
+  color: black;
+	overflow-x: hidden;
+}
+a, a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+}
+::selection {
+	background-color: #ffd500;
+	color: black;
+}
+
+
+/*Scrollbar Customization*/
+::-webkit-scrollbar {
+	width: 0.75rem;
+
+  &-thumb {
+		border-radius: 1rem;
+		background-image: $purpleBottomGrad;
+		
+		&:hover {
+			background-image: $yellowBottomGrad;
+		}
+	}
+	&-track {
+		background-color: white;
+	}
+}
+
+
+/*Custom CSS*/
+section {
+	padding: 3rem 0;
+}
+.button {
+	@extend %flex-row-wrap-center;
+	cursor: pointer;
+	border: none;
+	border-radius: $border-rad-md;
+	width: 9rem;
+	height: 2.5rem;
+	font-size: 1.1rem;
+	text-align: center;
+	color: white;
+	margin: 0.2rem 0.2rem;
+	transition: all 0.3s ease 0s;
+	background-image: $purpleBottomGrad;
+}
+
+@keyframes typing {
+	0% {
+		width: 0;
+	}
+	70% {
+		width: 100%;
+	}
+	100% {
+		width: 100%;
+	}
+}
+@keyframes blink {
+	50% {
+		border-color: transparent;
+	}
+}
+@keyframes up-slide {
+	0% {
+		transform: translateY(5rem);
+	}
+}
+@keyframes down-slide {
+	0% {
+		transform: translateY(-5rem);
+	}
+}
+@keyframes right-slide {
+	0% {
+		transform: translateX(-5rem);
+	}
+}
+@keyframes left-slide {
+	0% {
+		transform: translateX(5rem);
+	}
+}
+@keyframes backgroundSlide {
+	0% {
+		background-position: top left;
+	}
+	100% {
+		background-position: bottom right;
+	}
+}
+@keyframes opacity {
+	50% {
+	opacity: 0.3;
+	}
+}
+@keyframes wave {
+	50% {
+	transform: translateY(-0.25rem);
+	}
+}
+@keyframes jumping {
+	100% {
+		transform: translateY(-0.5rem);
+	}
+}
+
+/*Animated Gradient Section Classes*/
+.purpleWideSection {
+	background-image: $wpBottomGrad;
+	background-size: 300% 300%;
+	background-position: center;
+	animation: backgroundSlide 4s ease-in-out infinite alternate;
+}
+.blackWideSection {
+	background-image: $wbBottomGrad;
+	background-size: 300% 300%;
+	background-position: center;
+	animation: backgroundSlide 4s ease-in-out infinite alternate;
+}
+
+
+/*Heading Classes*/
+.headingContainer{
+	@extend %flex-col-wrap-center;
+	margin-bottom: 0.75rem;
+}
+.head {
+	text-align: center;
+	font-size: 1.5rem;
+	font-weight: bold;
+	border: none;
+	border-radius: $border-rad-sm;
+	background-repeat: no-repeat;
+}
+.yellowHeading {
+	color: white;
+	background-image:$yellowRightGrad;
+}
+.blueHeading {
+	color: black;
+	background-image:$purpleRightGrad;
+}
+
+
+/*Navigation*/
+.navbar {
+	padding: 0;
+
+	.navbar-brand {
+		.navLogo {
+			font-family: $dancing-script;
+			font-weight: bold;
+			font-size: 1.8rem;
+			color: blue;
+			transition: transform 0.5s ease;
+			text-shadow: 0 0 1rem #6A11CB;
+			cursor: pointer;
+			padding: 0;
+		}
+	}
+	.navbar-nav {
+		.nav-item {		
+			padding: 0;
+			margin: 0 0.25rem;
+		
+			.nav-link {
+				border-radius: $border-rad-sm;
+				color: blue;
+				padding: 0.2rem 0.65rem;
+				font-size: 1.25rem;
+				font-weight: 500;
+				
+				&:hover, &.active {
+					color: white;
+					font-weight: bold;
+					background-image: $purpleBottomGrad;
+				}
+			}
+		}
+  }
+}
+
+
+/*Home*/
+.home {
+	margin-top: 3.3rem;
+	height: 48rem;
+
+	.introduction {
+		top: 8rem;
+
+		.firstLine {
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-image: $purpleRightGrad;
+			font-weight: bold;
+			display: inline-flex;
+			font-size: 2.25rem;
+			animation: right-slide 1.5s ease-out;
+		}
+		.typing {
+			display: inline-flex;
+			flex-wrap: wrap;
+			max-width: 14rem;
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-image: $yellowRightGrad;
+			border-right: 0.2rem solid;
+			white-space: nowrap;
+			overflow: hidden;
+			font-size: 2rem;
+			font-weight: bold;
+			animation: typing 3s steps(12) infinite alternate, blink 0.5s step-end infinite alternate, left-slide 1.5s ease-out 1;
+		}
+		.introLine {
+			font-size: 1rem;
+			font-weight: 500;
+			margin-top: 0.5rem;
+			animation: up-slide 1.5s ease-out;
+		}
+		.buttonGroup {
+			@extend %flex-row-wrap-center;
+			width: 20rem;
+			height: 6rem;
+			margin-top: 6rem;
+			animation: down-slide 1.5s ease-out;
+		}
+	}
+	.image1 {
+		background-image: url('../images/background/1.svg');
+		background-repeat: no-repeat;
+		background-position: -10% 35%;
+		background-attachment: local;
+		height: 100%;
+		animation: left-slide 1.5s ease-out;
+	
+		&:hover {
+			opacity: 0.5;
+		}
+	}
+}
+
+
+/*About*/
+.about {
+	padding-bottom: 5rem;
+	height: 50rem;
+
+	.heading1 {
+		background-size: 47% 100%;
+		
+		&::before {
+			content: "ABO";
+			color: black;
+			padding-left: 0.8rem;
+			box-shadow: $yellow-head-shadow;
+			border-radius: $border-rad-sm;
+			font-weight: bold;
+		}
+	}
+	.para {
+		color: white;
+		margin-bottom: 3rem;
+		font-size: 1.15rem;
+		transition: all 0.3s ease-in-out;
+	}
+	.image2 {
+		background-image: url('../images/background/2.svg');
+		background-repeat: no-repeat;
+		background-position: center left;
+		background-attachment: local;
+	}
+}
+
+
+/*Technologies*/
+.technologies {
+	.heading2 {
+		background-size: 39% 100%;
+		margin-bottom: 0.4rem;
+	
+		&::before {
+			content: "TECH";
+			color: white;	
+			padding-left: 0.8rem;
+			box-shadow: $blue-head-shadow;
+			border-radius: $border-rad-sm;
+			font-weight: bold;
+		}
+		&+span {
+			font-size: 1.15rem;
+		}
+	}
+	.techLogo {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: end;
+		width: 14rem;
+		height: 14rem;
+		background-repeat: no-repeat;
+		background-size: 40% 40%;
+		background-position: center;
+		border-radius: $border-rad-sm;
+		transition: all 0.5s ease 0s;
+	
+		&>div {
+			margin: 1rem 0 1rem 0;
+			font-weight: bold;
+		}
+	}	
+	.html {
+		background-image: url("../images/logo/1.png");
+		box-shadow: 0 0.6rem 1rem 0 rgb(240,101,41);
+	}
+	.css {
+		background-image: url("../images/logo/2.png");
+		box-shadow: 0 0.6rem 1rem 0 rgb(41,101,241);
+	}
+	.sass {
+		background-image: url("../images/logo/3.png");
+		box-shadow: 0 0.6rem 1rem 0 rgb(211, 96, 231);
+	}
+	.bs {
+		background-image: url("../images/logo/4.png");
+		box-shadow: 0 0.6rem 1rem 0 rgb(128, 78, 227);
+	}
+	.js {
+		background-image: url("../images/logo/5.png");
+		box-shadow: 0 0.6rem 1rem 0 rgb(240,219,70);
+	}
+}
+
+
+/*Certifications*/
+.certifications {
+	padding-bottom: 7rem;
+
+  .heading3 {
+		background-size: 38% 100%;
+		margin-bottom: 1rem;
+	
+		&::before {
+			content: "CERT";
+			color: black;
+			font-weight: bold;
+			padding-left: 0.8rem;
+			box-shadow: $yellow-head-shadow;
+			border-radius: $border-rad-sm;
+		}
+	}
+	.cert {
+		margin-top: 2rem;
+	}
+}
+
+/*Projects*/
+.projects {
+	height: 48rem;
+
+  .heading4 {
+		background-size: 55% 100%;
+		margin-bottom: 1rem;
+	
+		&::before {
+			content: "PRO";
+			color: white;
+			font-weight: bold;
+			padding-left: 0.8rem;
+			box-shadow:$blue-head-shadow;
+			border-radius: $border-rad-sm;
+		}
+		.card {
+			.card-body {
+				.card-title {
+					-webkit-background-clip: text;
+					background-clip: text;
+					-webkit-text-fill-color: transparent;
+					background-image: $purpleRightGrad;
+					font-weight: bold;
+				}
+			}
+		}	
+	}
+}
+
+
+/*Footer(Contact)*/
+.footer {
+  background-image: $blackGrad;
+	padding: 0;
+	color: white;
+	margin-bottom: -2rem;
+
+	.footer-1 {
+		.thanks {
+			font-family: $pacifico;
+			padding-bottom: 1rem;
+			font-size: 1.5rem;
+			animation: opacity 1.75s ease infinite;
+		}
+		.contact-details {
+			display: flex;
+			flex-flow: column wrap;
+			justify-content: center;
+			align-content: start;
+			min-width: 25%;
+	
+			.heading5 {
+				font-size: 1.35rem;
+				font-weight: bold;
+				background-size: 32% 100%;
+				background-repeat: no-repeat;
+				border-radius: $border-rad-sm;
+			
+				&::before {
+					content: "Cont";
+					color: black;
+					font-weight: bold;
+					padding-left: 0.8rem;
+					box-shadow: $yellow-head-shadow;
+					border-radius: $border-rad-sm;
+				}
+			}
+			.socialMediaSection {
+				.socioLogo {
+					height: 1.4rem;
+					width: 1.4rem;
+					margin: 1rem 1rem 1.5rem 0.25rem;
+				}
+			}
+		}
+	}
+	.footer-2 {
+		font-size:1.3rem;
+		@extend %flex-row-wrap-center;
+		margin-top: 0.5rem;
+
+		.chirag {
+			display: flex;
+			flex-wrap: wrap;
+			font-size:1.45rem;
+			letter-spacing: 0.5px;
+		
+			&>span {
+				animation: wave 2s infinite;
+			}
+			&>span:nth-child(1) {
+				animation-delay: 0.15s;
+			}
+			&>span:nth-child(2) {
+				animation-delay: 0.30s;
+			}
+			&>span:nth-child(3) {
+				animation-delay: 0.45s;
+			}
+			&>span:nth-child(4) {
+				animation-delay: 0.60s;
+			}
+			&>span:nth-child(5) {
+				animation-delay: 0.75s;
+			}
+			&>span:nth-child(6) {
+				animation-delay: 0.85s;
+			}
+			&>span:nth-child(7) {
+				animation-delay: 0.95s;
+			}
+		}
+	}
+}
+
+/*Scroll-to-top*/
+.scroll-to-top {
+	position:fixed;
+	z-index: 1;
+	bottom: 9vh;
+	left: 48vw;
+
+	img {
+    height: 1.75rem;
+	  width: 1.75rem;
+	}
+}
+
+/*Breakpoint Size (Responsive)*/
+#breakpoint::before {
+  font-size: 1rem;
+  position: fixed;
+  z-index: 1000;
+  bottom: 0vh;
+  right: 0vw;
+}

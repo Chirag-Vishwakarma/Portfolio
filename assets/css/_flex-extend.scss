@@ -1,0 +1,14 @@
+%flex-row-wrap-center {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+}
+%flex-col-wrap-center {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+}
