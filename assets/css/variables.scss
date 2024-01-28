@@ -1,0 +1,24 @@
+// Font-family
+$primary-font: "Segoe UI", "Open Sans", calibri, sans-serif;
+$dancing-script: "Dancing Script", pacifico, cursive;
+$pacifico: pacifico, "Dancing Script", cursive;
+
+// Font-size
+$border-rad-sm: 0.5rem; //10px
+$border-rad-md: 2.5rem; //50px
+
+//Gradients (background-image)
+$purpleBottomGrad: linear-gradient(180deg, #6A11CB 0%, #005BEA 100%);
+$purpleRightGrad: linear-gradient(90deg, #6A11CB 0%, #005BEA 100%);
+
+$yellowRightGrad: linear-gradient(90deg, #FFE91C 0%, #FFA024 100%);
+$yellowBottomGrad: linear-gradient(180deg, #FFE91C 0%, #FFA024 100%);
+
+$blackGrad: linear-gradient(180deg, rgba(0,0,0,0.7), rgb(0,0,0));
+
+$wpBottomGrad: linear-gradient(180deg, #b700ff 0%, #7b00ff 50%, #0088ff 100%);
+$wbBottomGrad: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 100%);
+
+//box-shadow
+$yellow-head-shadow: 0 0 2.5rem 0 #FFA024;
+$blue-head-shadow: 0 0 2rem 0 #6A11CB;

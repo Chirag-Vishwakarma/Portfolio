@@ -1,0 +1,386 @@
+/*0. Large + X-large + XX-large devices & above (greater than 992px)*/
+@media screen and (min-width: 992px) {
+  .button:hover {
+    background-image: linear-gradient(90deg, #FFE91C 0%, #FFA024 100%);
+    color: black;
+    font-weight: bold;
+    box-shadow: 0 0 2rem 0 #FFA024;
+    transform: scale(1.05);
+  }
+  .scroll-to-top:hover {
+    animation: jumping 0.4s ease infinite alternate;
+  }
+  /*Navigation*/
+  .navLogo:hover {
+    color: transparent;
+    background-image: linear-gradient(90deg, #6A11CB 0%, #005BEA 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    transform: scale(1.1);
+  }
+  /*Home*/
+  /*.buttonGroup {
+  	& button:nth-child(1) {
+  		animation: right-slide 0.5s ease-out;
+  	}
+  	& button:nth-child(2) {
+  		animation: left-slide 0.5s ease-out;
+  	}
+  	& button:nth-child(3) {
+  		animation: right-slide 1.5s ease-out;
+  	}
+  	& button:nth-child(4) {
+  		animation: left-slide 1.5s ease-out;
+  	}
+  }*/
+  /*About*/
+  .image2:hover {
+    background-image: url("../images/background/3.svg");
+  }
+  .para:hover {
+    transform: scale(1.1);
+  }
+  /*Technologies*/
+  .technologies .techLogo {
+    margin: 3rem auto;
+  }
+  .technologies .techLogo:hover {
+    transform: scale(1.05);
+  }
+  .technologies .html:hover {
+    box-shadow: 0 1.5rem 3rem 0 rgb(240, 101, 41);
+  }
+  .technologies .css:hover {
+    box-shadow: 0 1.5rem 3rem 0 rgb(41, 101, 241);
+  }
+  .technologies .sass:hover {
+    box-shadow: 0 1.5rem 3rem 0 rgb(211, 96, 231);
+  }
+  .technologies .bs:hover {
+    box-shadow: 0 1.5rem 3rem 0 rgb(128, 78, 227);
+  }
+  .technologies .js:hover {
+    box-shadow: 0 1.5rem 3rem 0 rgb(240, 219, 70);
+  }
+  /*Certifications*/
+  .certifications .cert {
+    opacity: 0.5;
+    transition: all 0.5s ease-in-out 0s;
+  }
+  .certifications .cert:hover {
+    opacity: 1;
+    box-shadow: 0 0 2rem 0 rgb(255, 255, 255);
+    transform: scale(1.1);
+  }
+  /*Projects*/
+  .projects .card {
+    transition: all 0.6s ease-out 0s;
+  }
+  .projects .card:hover {
+    box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.3);
+  }
+  .projects .card .card-img-top {
+    opacity: 0.7;
+    transition: all 0.6s ease-out 0s;
+  }
+  .projects .card .card-img-top:hover {
+    opacity: 1;
+  }
+  /*Footer*/
+  .socioLogo:hover {
+    animation: jumping 0.4s ease infinite alternate;
+  }
+  .mail:hover {
+    opacity: 0.8;
+  }
+}
+/*(our laptop=1440px)
+1. XX-Large devices & above (larger desktops, greater than 1400px)*/
+@media screen and (min-width: 1400px) {
+  #breakpoint::before {
+    content: ">1400px(xxl)";
+    color: orange;
+  }
+}
+/*2. X-Large devices & below (large desktops, less than 1400px)*/
+@media screen and (max-width: 1400px) {
+  #breakpoint::before {
+    content: "<1400px(xl)";
+    border: 1px solid;
+    color: orange;
+  }
+  /*Technologies*/
+  .technologies .techLogo {
+    margin: 2rem auto;
+  }
+}
+/*3. Large devices & below (desktops, less than 1200px)*/
+@media screen and (max-width: 1199.98px) {
+  #breakpoint::before {
+    content: "<1200px(lg)";
+  }
+  :root {
+    font-size: 18px;
+  }
+}
+/*4. Medium devices & below (tablets, less than 992px)*/
+@media screen and (max-width: 991.98px) {
+  #breakpoint::before {
+    content: "<992px(md)";
+  }
+  .button:active {
+    background-image: linear-gradient(90deg, #FFE91C 0%, #FFA024 100%);
+    color: black;
+    font-weight: bold;
+    box-shadow: 0 0 2rem 0 #FFA024;
+    transform: scale(1.05);
+  }
+  /*Navigation*/
+  .header .navbar-nav {
+    display: none;
+  }
+  .header .menuButton {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+  }
+  .header .menuButton:hover .bar {
+    background-image: unset;
+    background-color: black;
+  }
+  .header .menuButton .bar {
+    width: 80%;
+    height: 0.35rem;
+    background-image: linear-gradient(90deg, #6A11CB 0%, #005BEA 100%);
+  }
+  .header .closeButton {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    height: 1.75rem;
+    width: 1.75rem;
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+  .header .closeButton:hover .closeBar {
+    background-image: unset;
+    background-color: black;
+  }
+  .header .closeButton .closeBar {
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 0.2rem;
+    color: transparent;
+    background-image: linear-gradient(90deg, #6A11CB 0%, #005BEA 100%);
+  }
+  .header .closeButton .closeBar1 {
+    z-index: 3;
+    transform: rotate(45deg);
+  }
+  .header .closeButton .closeBar2 {
+    z-index: 4;
+    transform: rotate(-45deg);
+  }
+  .header .dropDownMenu {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 10000;
+    width: 100vw;
+    height: 100vh;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    transform: translateY(-100vh);
+    transition: transform 0.5s ease;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  .header .dropDownMenu .dropDownList {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    list-style-type: none;
+    height: 60%;
+    margin: 0;
+    padding: 0;
+  }
+  .header .dropDownMenu .dropDownList li {
+    text-align: center;
+  }
+  .header .dropDownMenu .dropDownList li .menuItem {
+    font-size: 2.3rem;
+    text-decoration: none;
+  }
+  .header .dropDownMenu .dropDownList li .menuItem:link {
+    color: Blue;
+  }
+  .header .dropDownMenu .dropDownList li .menuItem:visited {
+    color: Blue;
+  }
+  .header .dropDownMenu .dropDownList li .menuItem:hover {
+    color: black;
+  }
+  .header .dropDownMenu .dropDownList li .menuItem:active {
+    color: white;
+  }
+  /*Home*/
+  .home .introduction {
+    text-align: center;
+  }
+  .home .introduction .buttonGroup {
+    width: 100%;
+    margin-top: 7rem;
+  }
+  /*Certifications*/
+  .cert {
+    width: 100%;
+  }
+  /*Footer*/
+  .footer > div {
+    padding: 2rem 3rem 1rem;
+  }
+  .footer .footer-1 {
+    flex-direction: column;
+  }
+  .footer .footer-1 .thanks {
+    text-align: center;
+  }
+}
+/*5. Small devices & below (landscape phones, less than 768px)*/
+@media screen and (max-width: 767.98px) {
+  #breakpoint::before {
+    content: "<768px(sm)";
+  }
+  .scroll-to-top {
+    bottom: 6vh;
+  }
+  /*Technologies*/
+  .techLogo {
+    margin: 1rem auto;
+  }
+  .techLogo > div {
+    margin: 1rem 0 1rem 0;
+  }
+  /*Footer*/
+  .footer > div {
+    padding: 2rem 2rem 1rem;
+  }
+  .footer .footer-1 .thanks {
+    font-size: 1.3rem;
+  }
+}
+/*6. X-Small devices & below (portrait phones, less than 576px)*/
+@media screen and (max-width: 575.98px) {
+  #breakpoint::before {
+    content: "<576px(xs)";
+  }
+  :root {
+    font-size: 16px;
+  }
+  /*Navigation*/
+  .header .dropDownMenu .dropDownList li .menuItem {
+    font-size: 2rem;
+  }
+  /*Technologies*/
+  .technologies .techLogo {
+    width: 10.5rem;
+    height: 10.5rem;
+    background-size: 55% 55%;
+  }
+  .technologies .techLogo > div {
+    margin-bottom: 0.5rem;
+  }
+  /*Projects*/
+  .projects {
+    height: 40rem;
+  }
+}
+/*8. X-Small devices & below (phones, less than 400px)*/
+@media screen and (max-width: 400px) {
+  #breakpoint::before {
+    content: "<400px(xxs)";
+  }
+  :root {
+    font-size: 15px;
+    line-height: 1.5rem;
+  }
+  /*Navigation*/
+  .header .menuButton {
+    height: 2rem;
+    width: 2rem;
+    margin-right: 0.25rem;
+  }
+  .header .menuButton .bar {
+    height: 0.3rem;
+  }
+  .header .closeButton {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+  /*Home*/
+  .home {
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 100vh;
+  }
+  .home .introduction .buttonGroup {
+    margin-top: 4rem;
+  }
+  /*About*/
+  .about {
+    padding-top: 5rem;
+  }
+  .about .para {
+    margin-bottom: 2rem;
+    font-size: 1.15rem;
+  }
+  /*Technologies*/
+  .technologies .techLogo {
+    width: 8rem;
+    height: 8rem;
+  }
+  .technologies .techLogo > div {
+    margin-bottom: 0.25rem;
+  }
+  /*Footer*/
+  .footer > div {
+    padding: 1.3rem 1rem 1rem;
+  }
+  .footer .footer-1 .thanks {
+    font-size: 1.25rem;
+  }
+  .footer .footer-2 {
+    font-size: 1.2rem;
+    margin-top: 0.75rem;
+  }
+  /*Projects*/
+  .projects {
+    height: 30rem;
+  }
+}
+/*(our phone = 345px*628px)//So test responsiveness by resizing window*/
+@media screen and (max-width: 345px) {
+  #breakpoint::before {
+    content: "<345px(xxs)";
+  }
+}
+/*Perfect till 338px Viewport width*//*# sourceMappingURL=responsive.css.map */
