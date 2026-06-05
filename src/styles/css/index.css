@@ -260,15 +260,15 @@ section {
   margin-top: 6rem;
   animation: down-slide 1.5s ease-out;
 }
-.home .image1 {
-  background-image: url("../../assets/images/background/1.svg");
+.home .homeBg {
+  background-image: url("../../assets/images/background/homeBg.svg");
   background-repeat: no-repeat;
   background-position: -10% 35%;
   background-attachment: local;
   height: 100%;
   animation: left-slide 1.5s ease-out;
 }
-.home .image1:hover {
+.home .homeBg:hover {
   opacity: 0.5;
 }
 
@@ -293,8 +293,8 @@ section {
   margin: 3rem 0;
   font-size: 1.15rem;
 }
-.about .image2 {
-  background-image: url("../../assets/images/background/2.svg");
+.about .aboutBg {
+  background-image: url("../../assets/images/background/aboutBg1.svg");
   background-repeat: no-repeat;
   background-position: center left;
   background-attachment: local;
@@ -334,19 +334,19 @@ section {
   font-weight: bold;
 }
 .technologies .html {
-  background-image: url("../../assets/logo/1.png");
+  background-image: url("../../assets/logo/html.png");
   box-shadow: 0 0.6rem 1rem 0 rgb(240, 101, 41);
 }
 .technologies .css {
-  background-image: url("../../assets/logo/2.png");
+  background-image: url("../../assets/logo/css.png");
   box-shadow: 0 0.6rem 1rem 0 rgb(41, 101, 241);
 }
 .technologies .sass {
-  background-image: url("../../assets/logo/3.png");
+  background-image: url("../../assets/logo/sass.png");
   box-shadow: 0 0.6rem 1rem 0 rgb(211, 96, 231);
 }
 .technologies .bs {
-  background-image: url("../../assets/logo/4.png");
+  background-image: url("../../assets/logo/bootstrap.png");
   box-shadow: 0 0.6rem 1rem 0 rgb(128, 78, 227);
 }
 .technologies .react {
@@ -354,7 +354,7 @@ section {
   box-shadow: 0 0.6rem 1rem 0 rgb(0, 216, 255);
 }
 .technologies .js {
-  background-image: url("../../assets/logo/5.png");
+  background-image: url("../../assets/logo/js.png");
   box-shadow: 0 0.6rem 1rem 0 rgb(240, 219, 70);
 }
 .technologies .git {

@@ -39,8 +39,8 @@
 	}*/
 
     /*About*/
-    .image2:hover {
-        background-image: url('../images/background/3.svg');
+    .aboutBg:hover {
+        background-image: url('../../assets/images/background/aboutBg2.svg');
     }
 
     /*Technologies*/
@@ -150,6 +150,17 @@
         content: '<992px(md)';
     }
 
+    #projects,
+    #certifications,
+    #about {
+        height: auto;
+        padding-block: 4rem;
+    }
+
+    #contact {
+        height: auto;
+        padding-block: 1rem;
+    }
     .button:active {
         background-image: $yellowRightGrad;
         color: black;
