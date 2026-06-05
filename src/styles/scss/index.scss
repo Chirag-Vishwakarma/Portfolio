@@ -260,7 +260,7 @@ section {
         }
     }
     .image1 {
-        background-image: url('../images/background/1.svg');
+        background-image: url('../../assets/images/background/1.svg');
         background-repeat: no-repeat;
         background-position: -10% 35%;
         background-attachment: local;
@@ -296,7 +296,7 @@ section {
         font-size: 1.15rem;
     }
     .image2 {
-        background-image: url('../images/background/2.svg');
+        background-image: url('../../assets/images/background/2.svg');
         background-repeat: no-repeat;
         background-position: center left;
         background-attachment: local;
@@ -340,28 +340,32 @@ section {
         }
     }
     .html {
-        background-image: url('../images/logo/1.png');
+        background-image: url('../../assets/logo/1.png');
         box-shadow: 0 0.6rem 1rem 0 rgb(240, 101, 41);
     }
     .css {
-        background-image: url('../images/logo/2.png');
+        background-image: url('../../assets/logo/2.png');
         box-shadow: 0 0.6rem 1rem 0 rgb(41, 101, 241);
     }
     .sass {
-        background-image: url('../images/logo/3.png');
+        background-image: url('../../assets/logo/3.png');
         box-shadow: 0 0.6rem 1rem 0 rgb(211, 96, 231);
     }
     .bs {
-        background-image: url('../images/logo/4.png');
+        background-image: url('../../assets/logo/4.png');
         box-shadow: 0 0.6rem 1rem 0 rgb(128, 78, 227);
     }
     .react {
-        background-image: url('../images/logo/react.png');
+        background-image: url('../../assets/logo/react.png');
         box-shadow: 0 0.6rem 1rem 0 rgb(0, 216, 255);
     }
     .js {
-        background-image: url('../images/logo/5.png');
+        background-image: url('../../assets/logo/5.png');
         box-shadow: 0 0.6rem 1rem 0 rgb(240, 219, 70);
+    }
+    .git {
+        background-image: url('../../assets/logo/git.png');
+        box-shadow: 0 0.6rem 1rem 0 rgb(0, 0, 0);
     }
 }
 
@@ -390,10 +394,10 @@ section {
 
 /*Projects*/
 .projects {
-    height: 48rem;
+    min-height: 48rem;
 
     .heading4 {
-        background-size: 55% 100%;
+        background-size: 50% 100%;
         margin-bottom: 1rem;
 
         &::before {

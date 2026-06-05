@@ -305,7 +305,7 @@
   }
   /*Projects*/
   .projects {
-    height: 40rem;
+    min-height: 40rem;
   }
 }
 /*8. X-Small devices & below (phones, less than 400px)*/
@@ -368,7 +368,7 @@
   }
   /*Projects*/
   .projects {
-    height: 30rem;
+    min-height: 30rem;
   }
 }
 /*(our phone = 345px*628px)//So test responsiveness by resizing window*/
