@@ -2,14 +2,14 @@ let hour = new Date().getHours();
 let greeting;
 
 if (hour < 5) {
-    greeting = 'Hello..!🖐';
+    greeting = 'Hello !';
 } else if (hour < 12) {
-    greeting = 'Good Morning..!☕';
+    greeting = 'Good Morning !';
 } else if (hour < 16) {
-    greeting = 'Good Afternoon..!😃';
+    greeting = 'Good Afternoon !';
 } else if (hour < 20) {
-    greeting = 'Good Evening..!🌙';
+    greeting = 'Good Evening !';
 } else {
-    greeting = 'Hello..!🖐';
+    greeting = 'Hello !';
 }
-window.alert(greeting + " Welcome to Chirag's Portfolio..❤");
+document.getElementById('greeting').textContent = greeting;

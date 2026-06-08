@@ -6,7 +6,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 :root {
-    font-size: 20px; //always keep it in px not rem (as rem will use user's browser font-size which will break all the design)
+    font-size: 14px; //always keep it in px not rem (as rem will use user's browser font-size which will break all the design)
 }
 *,
 body,
@@ -18,7 +18,7 @@ body,
     line-height: 1.75; //always specify in "times of font-size" instead of "rem/px" as for elements with bigger fonts(h2, h1 etc.) become half due to them
 }
 body {
-    margin: 0;
+    margin: auto;
     padding: 0;
     background: white;
     color: black;
@@ -55,7 +55,8 @@ a:active {
 
 /*Custom CSS*/
 section {
-    padding: 3rem 0;
+    width: 100vw;
+    margin: auto;
 }
 .button {
     //keep this button class in <a> to get "button.active" effect on "focus" instead of hover effect(for smaller devices)
@@ -211,25 +212,43 @@ section {
 
 /*Home*/
 .home {
-    margin-top: 3.3rem;
+    margin-top: 1.5rem;
     height: 48rem;
 
     .introduction {
         top: 8rem;
 
+        #greeting {
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(
+                90deg,
+                rgb(0, 100, 255) 0%,
+                rgb(0, 0, 200) 100%
+            );
+            font-weight: 600;
+            font-size: 2.2rem;
+            animation: right-slide 1.5s ease-out;
+            line-height: 1.4;
+        }
+
         .firstLine {
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-image: $purpleRightGrad;
+            background-image: linear-gradient(
+                90deg,
+                rgb(175, 50, 255) 0%,
+                rgb(0, 0, 255) 100%
+            );
             font-weight: bold;
-            display: inline-flex; //makes animation work
             font-size: 2.25rem;
             animation: right-slide 1.5s ease-out;
+            line-height: 1.4;
         }
         .typing {
-            display: inline-flex; //makes animation work
-            flex-wrap: wrap;
+            display: inline-flex; //makes animation work (as width of inline element is based on content and not parent container)
             max-width: 18rem;
             -webkit-background-clip: text;
             background-clip: text;
@@ -240,6 +259,7 @@ section {
             overflow: hidden;
             font-size: 2rem;
             font-weight: bold;
+            line-height: 1.4;
             animation:
                 typing 3s steps(12) infinite alternate,
                 blink 0.5s step-end infinite alternate,
@@ -253,6 +273,7 @@ section {
         }
         .buttonGroup {
             @extend %flex-row-wrap-center;
+            align-self: flex-start;
             width: 20rem;
             height: 6rem;
             margin-top: 6rem;
@@ -298,7 +319,7 @@ section {
     .aboutBg {
         background-image: url('../../assets/images/background/aboutBg1.svg');
         background-repeat: no-repeat;
-        background-position: center left;
+        background-position: 30% 20%;
         background-attachment: local;
     }
 }
@@ -424,7 +445,6 @@ section {
 /*Footer(Contact)*/
 .footer {
     background-image: $blackGrad;
-    padding: 0;
     color: white;
     margin-bottom: -2rem;
 

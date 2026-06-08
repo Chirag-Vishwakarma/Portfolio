@@ -18,7 +18,7 @@
 }
 
 :root {
-  font-size: 20px;
+  font-size: 14px;
 }
 
 *,
@@ -32,7 +32,7 @@ body,
 }
 
 body {
-  margin: 0;
+  margin: auto;
   padding: 0;
   background: white;
   color: black;
@@ -69,7 +69,8 @@ a:active {
 
 /*Custom CSS*/
 section {
-  padding: 3rem 0;
+  width: 100vw;
+  margin: auto;
 }
 
 .button {
@@ -217,25 +218,34 @@ section {
 
 /*Home*/
 .home {
-  margin-top: 3.3rem;
+  margin-top: 1.5rem;
   height: 48rem;
 }
 .home .introduction {
   top: 8rem;
 }
+.home .introduction #greeting {
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(90deg, rgb(0, 100, 255) 0%, rgb(0, 0, 200) 100%);
+  font-weight: 600;
+  font-size: 2.2rem;
+  animation: right-slide 1.5s ease-out;
+  line-height: 1.4;
+}
 .home .introduction .firstLine {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(90deg, #6a11cb 0%, #005bea 100%);
+  background-image: linear-gradient(90deg, rgb(175, 50, 255) 0%, rgb(0, 0, 255) 100%);
   font-weight: bold;
-  display: inline-flex;
   font-size: 2.25rem;
   animation: right-slide 1.5s ease-out;
+  line-height: 1.4;
 }
 .home .introduction .typing {
   display: inline-flex;
-  flex-wrap: wrap;
   max-width: 18rem;
   -webkit-background-clip: text;
   background-clip: text;
@@ -246,6 +256,7 @@ section {
   overflow: hidden;
   font-size: 2rem;
   font-weight: bold;
+  line-height: 1.4;
   animation: typing 3s steps(12) infinite alternate, blink 0.5s step-end infinite alternate, left-slide 1.5s ease-out 1;
 }
 .home .introduction .introLine {
@@ -255,6 +266,7 @@ section {
   animation: up-slide 1.5s ease-out;
 }
 .home .introduction .buttonGroup {
+  align-self: flex-start;
   width: 20rem;
   height: 6rem;
   margin-top: 6rem;
@@ -296,7 +308,7 @@ section {
 .about .aboutBg {
   background-image: url("../../assets/images/background/aboutBg1.svg");
   background-repeat: no-repeat;
-  background-position: center left;
+  background-position: 30% 20%;
   background-attachment: local;
 }
 
@@ -409,7 +421,6 @@ section {
 /*Footer(Contact)*/
 .footer {
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgb(0, 0, 0));
-  padding: 0;
   color: white;
   margin-bottom: -2rem;
 }

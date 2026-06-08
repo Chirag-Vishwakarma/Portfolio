@@ -115,6 +115,10 @@
         content: '>1400px(xxl)';
         color: orange;
     }
+
+    section {
+        padding: 3rem 20%;
+    }
 }
 
 /*2. X-Large devices & below (large desktops, less than 1400px)*/
@@ -123,6 +127,10 @@
         content: '<1400px(xl)';
         border: 1px solid;
         color: orange;
+    }
+
+    section {
+        padding: 3rem 10%;
     }
 
     /*Technologies*/
@@ -139,9 +147,9 @@
         content: '<1200px(lg)';
     }
 
-    :root {
-        font-size: 18px;
-    }
+    // :root {
+    //     font-size: 18px;
+    // }
 }
 
 /*4. Medium devices & below (tablets, less than 992px)*/
@@ -304,9 +312,6 @@
 
     /*Footer*/
     .footer {
-        & > div {
-            padding: 2rem 3rem 1rem;
-        }
         .footer-1 {
             flex-direction: column;
 
@@ -338,12 +343,23 @@
 
     /*Footer*/
     .footer {
-        & > div {
-            padding: 2rem 2rem 1rem;
-        }
+        font-size: 1rem;
         .footer-1 {
+            font-size: inherit;
             .thanks {
-                font-size: 1.3rem;
+                font-size: 1.2rem;
+            }
+            .contact-details {
+                font-size: inherit;
+            }
+            .heading5 {
+                font-size: inherit;
+            }
+        }
+        .footer-2 {
+            font-size: inherit;
+            .chirag {
+                font-size: inherit;
             }
         }
     }
@@ -355,9 +371,9 @@
         content: '<576px(xs)';
     }
 
-    :root {
-        font-size: 16px;
-    }
+    // :root {
+    //     font-size: 16px;
+    // }
 
     /*Navigation*/
     .header {
@@ -389,6 +405,27 @@
     .projects {
         min-height: 40rem;
     }
+    .footer {
+        font-size: 1rem;
+        .footer-1 {
+            font-size: inherit;
+            .thanks {
+                font-size: 1.2rem;
+            }
+            .contact-details {
+                font-size: inherit;
+            }
+            .heading5 {
+                font-size: inherit;
+            }
+        }
+        .footer-2 {
+            font-size: inherit;
+            .chirag {
+                font-size: inherit;
+            }
+        }
+    }
 }
 
 /*8. X-Small devices & below (phones, less than 400px)*/
@@ -397,10 +434,10 @@
         content: '<400px(xxs)';
     }
 
-    :root {
-        font-size: 15px;
-        line-height: 1.5rem;
-    }
+    // :root {
+    //     font-size: 15px;
+    //     line-height: 1.5rem;
+    // }
 
     /*Navigation*/
     .header {
@@ -456,18 +493,6 @@
 
     /*Footer*/
     .footer {
-        & > div {
-            padding: 1.3rem 1rem 1rem;
-        }
-        .footer-1 {
-            .thanks {
-                font-size: 1.25rem;
-            }
-        }
-        .footer-2 {
-            font-size: 1.2rem;
-            margin-top: 0.75rem;
-        }
     }
 
     /*Projects*/
