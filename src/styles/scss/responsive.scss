@@ -1,7 +1,48 @@
 @use 'variables' as *;
 
-/*0. Large + X-large + XX-large devices & above (greater than 992px)*/
-@media screen and (min-width: 992px) {
+/*(our laptop=1540px)
+1. XX-Large devices & above (larger desktops, greater than 1400px)*/
+@media screen and (min-width: 1400px) {
+    #breakpoint::before {
+        content: '>1400px(xxl)';
+        color: orange;
+    }
+
+    section {
+        padding: 3rem 20%;
+    }
+}
+
+/*2. X-Large devices & below (large desktops, less than 1400px)*/
+@media screen and (max-width: 1400px) {
+    #breakpoint::before {
+        content: '<1400px(xl)';
+        border: 1px solid;
+        color: orange;
+    }
+
+    section {
+        padding: 3rem 10%;
+    }
+
+    /*Technologies*/
+    .technologies {
+        .techLogo {
+            margin: 2rem auto;
+        }
+    }
+}
+
+/*3. Large devices & below (desktops, less than 1200px)*/
+@media screen and (max-width: 1199.98px) {
+    #breakpoint::before {
+        content: '<1200px(lg)';
+    }
+
+    // :root {
+    //     font-size: 18px;
+    // }
+
     .button:hover {
         background-image: $yellowRightGrad;
         color: black;
@@ -106,50 +147,6 @@
     .mail:hover {
         opacity: 0.8;
     }
-}
-
-/*(our laptop=1440px)
-1. XX-Large devices & above (larger desktops, greater than 1400px)*/
-@media screen and (min-width: 1400px) {
-    #breakpoint::before {
-        content: '>1400px(xxl)';
-        color: orange;
-    }
-
-    section {
-        padding: 3rem 20%;
-    }
-}
-
-/*2. X-Large devices & below (large desktops, less than 1400px)*/
-@media screen and (max-width: 1400px) {
-    #breakpoint::before {
-        content: '<1400px(xl)';
-        border: 1px solid;
-        color: orange;
-    }
-
-    section {
-        padding: 3rem 10%;
-    }
-
-    /*Technologies*/
-    .technologies {
-        .techLogo {
-            margin: 2rem auto;
-        }
-    }
-}
-
-/*3. Large devices & below (desktops, less than 1200px)*/
-@media screen and (max-width: 1199.98px) {
-    #breakpoint::before {
-        content: '<1200px(lg)';
-    }
-
-    // :root {
-    //     font-size: 18px;
-    // }
 }
 
 /*4. Medium devices & below (tablets, less than 992px)*/
@@ -428,7 +425,7 @@
     }
 }
 
-/*8. X-Small devices & below (phones, less than 400px)*/
+/*7. X-Small devices & below (phones, less than 400px)*/
 @media screen and (max-width: 400px) {
     #breakpoint::before {
         content: '<400px(xxs)';
@@ -491,17 +488,13 @@
         }
     }
 
-    /*Footer*/
-    .footer {
-    }
-
     /*Projects*/
     .projects {
         min-height: 30rem;
     }
 }
 
-/*(our phone = 345px*628px)//So test responsiveness by resizing window*/
+/*8. (our phone = 345px*628px)//So test responsiveness by resizing window*/
 @media screen and (max-width: 345px) {
     #breakpoint::before {
         content: '<345px(xxs)';
