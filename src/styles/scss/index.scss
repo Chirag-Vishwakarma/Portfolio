@@ -249,7 +249,7 @@ section {
         }
         .typing {
             display: inline-flex; //makes animation work (as width of inline element is based on content and not parent container)
-            max-width: 18rem;
+            max-width: 18.5rem;
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
